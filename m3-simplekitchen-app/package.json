@@ -1,0 +1,33 @@
+{
+  "name": "express-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run watch:all",
+    "watch": "nodemon ./start.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite' "
+  },
+  "author": "Fan Yang",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "http-auth": "^4.1.2",
+    "lite-server": "^2.6.1",
+    "mongoose": "^5.12.0",
+    "onchange": "^7.1.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.7",
+    "parallelshell": "^3.0.1"
+  }
+}
